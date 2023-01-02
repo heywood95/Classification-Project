@@ -1,25 +1,23 @@
 # Classification-Project
-
-# Chess Upsets
  
 # Project Description
  
-Chess is widely renowned as one of the most skill intensive games ever invented. Both sides begin the game with identical pieces in an identical position, there are no random elements (aside from assigning the first move), and the movement of those pieces during a game can result in over 121 million possible combinations in just the fist three moves. Because of this, the player with the most skill is likely to win the grand majority of chess games. I have decided to look into the different elements of a chess game to determine if any of them increase or decrease the chance of a player with lower skill defeating a player with greater skill.
+The churn rate at Teleco will be investigated using a variety of target variables to predict customer churn using classification techniques, and make predictions for a group of customers. I have decided to look into four different areas that may affect churn rate.
  
 # Project Goal
  
-* Discover drivers of upsets in chess games played on Lichess.org
-* Use drivers to develop a machine learning model to classify games as ending in upset or not ending in upset
-* An upset is defined as a lower rated player defeating a higher rated player. 
-* This information could be used to further our understanding of which game elements contribute to or detract from a game’s skill intensity.
+* Find drivers for customer churn at Telco. Why are customers churning?
+* Construct a ML classification model that accurately predicts customer churn.
+* Deliver a report that a non-data scientist can read through and understand what steps were taken, why and what was the outcome?
+
  
 # Initial Thoughts
  
-My initial hypothesis is that drivers of upsets will be elements that either grant an outright advantage to one player or increase the likelihood of players making mistakes.
+My initial hypothesis is that drivers of churn will depend on the type of service used by a customer and the amount of the montly payments.
  
 # The Plan
  
-* Aquire data from Kaggle
+* Aquire data from telco_churn database
  
 * Prepare data
    * Create Engineered columns from existing data
