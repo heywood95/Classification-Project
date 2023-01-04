@@ -21,25 +21,22 @@ My initial hypothesis is that drivers of churn will depend on the type of servic
  
 * Prepare data
    * Create Engineered columns from existing data
-       * upset
-       * rating_difference
-       * game_rating
-       * lower_rated_white
-       * time_control_group
+       * online_security_Yes
+       * internet_service_type_Fiber optic
+       * monthly_encoded
+       * monthly_charges_greater_than_80
  
 * Explore data in search of drivers of upsets
    * Answer the following initial questions
-       * How often do upsets occur?
-       * Does first move advantage affect upsets?
-       * Does a game being rated affect upsets?
-       * Does the average rating of both players have an effect on upsets?
-       * Does time block affect upsets?
-       * Does a player's choice of opening affect upsets?
+       * Are customers with Fiber Optic more or less likely to churn?
+       * Does the type of contract (one year, two year, or month to month) affect if a customer churns?
+       * Is there a service that is associated with more churn than expected?
+       * Do customers who churn have a higher average monthly spend than those who don't?
       
-* Develop a Model to predict if a chess game will end in an upset
+* Develop a Model to predict if a customer will churn
    * Use drivers identified in explore to build predictive models of different types
    * Evaluate models on train and validate data
-   * Select the best model based on highest accuracy
+   * Select the best model based on highest validate and difference accuracy
    * Evaluate the best model on test data
  
 * Draw conclusions
@@ -48,7 +45,7 @@ My initial hypothesis is that drivers of churn will depend on the type of servic
 
 | Feature | Definition |
 |:--------|:-----------|
-|Rated| True or False, The game's result is reflected in each player's rating|
+|Churn| True or False, Has the customer left the company|
 |Winning Pieces| The color of pieces the winning player was moving|
 |White Rating| Rating of the player moving the white pieces using the Glicko-2 rating method for games played on Lichess|
 |Black Rating| Rating of the player moving the white pieces using the Glicko-2 rating method for games played on Lichess|
