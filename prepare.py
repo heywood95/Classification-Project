@@ -3,16 +3,17 @@
 
 # In[1]:
 
-
+# List of imports
 import pandas as pd
 import numpy as np
-
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 
-# ------------------- BASIC SPLIT FUNCTION  -------------------
 
 def my_train_test_split(df, target):
+    '''
+    This is a simple split function to split data into train, validate, test.
+    '''
     train, test = train_test_split(df, test_size=.2, random_state=123, stratify=df[target])
     train, validate = train_test_split(train, test_size=.25, random_state=123, stratify=train[target])
     return train, validate, test
@@ -21,12 +22,10 @@ def my_train_test_split(df, target):
 # In[2]:
 
 
-# ------------------- TELCO DATA -------------------
-
 def split_telco_data(df):
     '''
-    This function performs split on telco data, stratify churn.
-    Returns train, validate, and test dfs.
+    This function performs split on telco data using churn as the target.
+    Returns train, validate, and test df.
     '''
     train_validate, test = train_test_split(df, test_size=.2, 
                                         random_state=123, 
@@ -37,6 +36,10 @@ def split_telco_data(df):
     return train, validate, test
 
 def prep_telco_data(df):
+    '''
+    This function cleans up the data, dropping columns, nulls, and converting to correct
+    datatype, converting binaries to numeric values, and creating dummies.
+    '''
     # Drop duplicate columns
     df.drop(columns=['payment_type_id', 'internet_service_type_id', 'contract_type_id', 'customer_id'], inplace=True)
        
