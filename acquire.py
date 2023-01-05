@@ -14,7 +14,7 @@ from env import host, username, password
 
 def get_connection(db, user=username, host=host, password=password):
     '''
-    This function accesses my .csv file in order to access the database
+    This function accesses my .csv file for telco
     '''
     return f'mysql+pymysql://{user}:{password}@{host}/{db}'
     
@@ -37,7 +37,7 @@ def new_telco_data():
 
 def get_telco_data():
     '''
-    This function creates a csv file
+    This function creates a .csv file for the telco db
     '''
     if os.path.isfile('telco.csv'):
         
