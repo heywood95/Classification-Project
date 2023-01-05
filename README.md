@@ -46,33 +46,48 @@ My initial hypothesis is that drivers of churn will depend on the type of servic
 | Feature | Definition |
 |:--------|:-----------|
 |Churn| True or False, Has the customer left the company|
-|Winning Pieces| The color of pieces the winning player was moving|
-|White Rating| Rating of the player moving the white pieces using the Glicko-2 rating method for games played on Lichess|
-|Black Rating| Rating of the player moving the white pieces using the Glicko-2 rating method for games played on Lichess|
-|Rating Difference| The difference in rating between the players in the game|
-|Game Rating| The average rating of the two players in the game|
-|Lower Rated White| True or False, The lower rated player is moving the white pieces|
-|Opening Name| The name of the opening played in the game|
-|Time Control Group| The amount of time allotted to each player to make their moves, **Standard** (60 min or more), **Rapid** (30 - 15 min), **Blitz** (5 - 3 min), or **Bullet** (2 or less), **Other** (any other time limit)|
-|Upset (Target)| True or False, The lower rated player won the game|
-|Additional Features|Encoded and values for categorical data and scaled versions continuous data|
+|Gender| Female or Male|
+|Senior Citizen| Is the customer a senior citizen, yes or no|
+|Partner| Does the customer have a partner designated upon signing a contract, yes or no|
+|Dependents| Are there any dependents on file for the customer, yes or no|
+|Tenure| How long, in weeks, have the customer been with Telco|
+|Phone Service| Does the customer have phone service, yes or no|
+|Multiple Lines| Does the customer have multiple lines of service, yes or no|
+|Online Security| Does the customer have online security, yes, no, or no internet|
+|Online Backup| Does the customer have backup for their internet, yes, no or no internet|
+|Device Protection|Does the customer have device protection, yes, no, or no internet|
+|Streaming Movies|Does the customer have the ability to stream movies, yes or no|
+|Streaming TV|Does the customer have the ability to stream TV, yes or no|
+|Contract Type|Does the customer have a one year, two year, or month to month contract|
+|Internet Service Type|What type of internet service does the customer have, fiber optic, DSL, or no internet|
+|Payment Type|How does the customer pay their bill, credit card, electronic check, or mailed check|
  
 # Steps to Reproduce
 1) Clone this repo.
-2) Acquire the data from [Kaggle](https://www.kaggle.com/datasnaek/chess)
+2) Acquire the data from Codeup DB Server/telco_churn
 3) Put the data in the file containing the cloned repo.
 4) Run notebook.
  
 # Takeaways and Conclusions
-* Upsets occur in 1/3 of games
-* In games where the lower rated player moves first there is a 4% greater chance of an upset
-* Games that are rated have a 3% higher chance of an upset
-* Games with a "quick" time control (30 min or less) have about a 1 in 3 chance of upset
-* Games with a "slow" time control (60 min or more) have about a 1 in 5 chance of upset
-* The mean rating of players in a game is not a driver of upsets
-* The difference in player rating is a driver of upsets
-* A player's choice of opening is a driver of upsets, however its influence is complicated and I would need more time to discover what role it plays
+* About 43% of customers with fiber optic churned.
+* About 13% of customers without fiber optic churned.
+* It is more likely that customers who have fiber optic churned versus customers who did not have fiber optic.
+* Month to month contracts have the highest level of churn.
+* One year contracts are the next highest, but still relatively low churn.
+* Two year contracts have the lowest level of churn.
+* While it is no surprise that month to month contracts produce the highest level of churn, the drastic drop from month to month to one       year and two year contracts should be looked at and possible incentives or discounts for the one year and two year contracts could reduce   the amount of month to month contracts and level of churn.
+* Customers with online security have 17% churn rate.
+* Customers with no internet service have an 11% churn rate.
+* Customers withouth online security have a 40% churn rate.
+* The major contributor for customer churn is more correlated with internet services that provide security such as tech support, device       protection, online backup, and online security.
+* Other services for entertainment purposes such as streaming tv and movies had less of an impact on customer churn.
+* As charges increase, churn increases until the rate reaches over 100 dollars.
+* The largest proportion of customers spent between 20-30 dollars.
+* It would appear that the more money that was spent by the customer, the more likely they are to churn.
+* The large majority of those that churned spent 500 dollars or less on total charges.
+* Those customers who spent about 80 dollars a month were the most likely to churn.
+* Total charges produced insufficient data to support a correlation between total charges and churn.
  
 # Recommendations
-* To increase the skill intensity of a game add to the length of time players are able to consider their moves
-* Based on the data longer time controls make it less likely for a less skilled player to beat a more skilled player
+* To reduce churn decrease the amount of month to month contracts and increase the amount of one and two year contracts.
+* Provide online security to all of the customers, this area produced the highest probability of customer churn.
